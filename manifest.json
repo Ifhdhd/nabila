@@ -1,0 +1,10 @@
+
+{
+  "name": "Firebase Admin Panel",
+  "short_name": "FBAdmin",
+  "start_url": "index.html",
+  "display": "standalone",
+  "theme_color": "#b31212",
+  "background_color": "#0d0d0d",
+  "icons": []
+}

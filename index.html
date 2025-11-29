@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Firebase Admin Complete</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="assets/style.css">
+<script>
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+}
+</script>
+</head>
+<body>
+
+<h2>Firebase Admin — Multi Edit (Complete PWA)</h2>
+
+<div class="card">
+<h3>Konfigurasi Database</h3>
+<input id="dbUrl" placeholder="Database URL">
+<input id="dbSecret" placeholder="Database Secret">
+<button onclick="saveConfig()">Simpan</button>
+<button onclick="resetConfig()">Reset</button>
+</div>
+
+<div class="card">
+<h3>Aksi</h3>
+<button onclick="loadData()">Refresh</button>
+<button onclick="openMultiEdit()">Edit Terpilih</button>
+</div>
+
+<div class="card">
+<h3>Daftar Users</h3>
+<div id="userList">Belum ada data</div>
+</div>
+
+<!-- Modal Multi Edit -->
+<div class="modal" id="multiModal">
+<div class="panel">
+<h3>Edit Massal</h3>
+<input id="multi_username" placeholder="Username (opsional)">
+<input id="multi_password" placeholder="Password (opsional)">
+<input id="multi_expiry" placeholder="Expiry yyyy-mm-dd (opsional)">
+<button onclick="applyMultiEdit()">Simpan Perubahan</button>
+<button onclick="closeMulti()">Batal</button>
+</div>
+</div>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
